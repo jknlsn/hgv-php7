@@ -19,7 +19,7 @@ This Playbook will setup:
 - **PHP-FPM** (PHP Parser)
 - **Nginx**
 - **Varnish** (Running by default)
-- ~~**Memcached and APC**~~ Not compatibel with PHP7 at the moment.
+- ~~**Memcached and APC**~~ Not compatible with PHP7 at the moment.
 - **Clean WordPress Install** (Latest Version, although confirmed working with 4.4 at time of writing)
 - **WP-CLI**
 
