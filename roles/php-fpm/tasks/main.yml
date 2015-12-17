@@ -1,0 +1,20 @@
+---
+
+- name: Install PHP packages
+  run_once: true
+  apt: name={{ item }} state=present
+  with_items:
+      - php7.0
+      - php7.0-cli
+      # - php5-imagick
+      - php7.0-curl
+      - php7.0-gd
+      - php7.0-fpm
+      # - php5-memcache
+      # - php5-memcached
+      # - php5-xdebug
+      # - phpunit
+
+# - name: Do fpm/php.ini
+#   template: src=etc/php5/fpm/php.ini dest=/etc/php5/fpm/php.ini owner=root group=root mode=0644
+#   notify: php5-fpm restart
