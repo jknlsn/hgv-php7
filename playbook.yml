@@ -10,4 +10,4 @@
     - nginx
     - wp-cli
     - varnish
-    - { role: wordpress, enviro: hhvm, tags: [ 'wordpress' ] }
+    - { role: wordpress, enviro: php7, tags: [ 'wordpress' ] }
