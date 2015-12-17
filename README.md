@@ -60,4 +60,4 @@ Please report any issues through GitHub and I'll do my best to get back to you!
 ## Bugs / known issues
 
 1. WordPress Customizer doesn't work with Varnish set up. To resolve, follow the aboves step to turn off Varnish and then reverse when done.
-2. WordPress installation may fail due to unescaped characters in the salts variable killing Ansible. To retry, remove the files from the directory installed to, i.e. /var/www/html/website with the command `rm -rf /var/www/html/website/*`
+2. WordPress installation may fail due to unescaped characters in the salts variable killing Ansible. To retry, remove the files from the directory installed to, i.e. /var/www/html/website with the command `rm -rf /var/www/html/website/*`, and then re-run the playbook with `sudo ansible-playbook -i hosts playbook.yml -c local`
