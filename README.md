@@ -29,7 +29,7 @@ This Playbook will setup:
 
 1. SSH onto a newly created server
 1.5. Add necessary Apt package (if not already installed) with `sudo apt-get install software-properties-common python-software-properties`
-2. Add Ansible and PHP 7 repositories with `sudo add-apt-repository ppa:ondrej/php-7.0 ppa:ansible/ansible`
+2. Add Ansible and PHP 7 repositories with `sudo add-apt-repository ppa:ondrej/php-7.0 && sudo add-apt-repository ppa:ansible/ansible`, press ENTER when requested
 3. Update Apt with `sudo apt-get update && sudo apt-get upgrade`
 4. Install Git and Ansible with `sudo apt-get install ansible git`
 5. Clone this repository with `git clone https://github.com/jknlsn/hgv-php7/`
@@ -60,3 +60,4 @@ Please report any issues through GitHub and I'll do my best to get back to you!
 ## Bugs / known issues
 
 1. WordPress Customizer doesn't work with Varnish set up. To resolve, follow the aboves step to turn off Varnish and then reverse when done.
+2. WordPress installation may fail due to unescaped characters in the salts variable killing Ansible. To retry, remove the files from the directory installed to, i.e. /var/www/html/website with the command `rm -rf /var/www/html/website/*`
