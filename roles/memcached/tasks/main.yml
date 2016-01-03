@@ -7,5 +7,4 @@
 - name: Do memcached config
   run_once: true
   template: src=etc/memcached.conf dest=/etc/memcached.conf owner=root group=root mode=0644
-  template: src=etc/init.d/memcached dest=/etc/init.d/memcached owner=root group=root mode=0755
   notify: php-memcached restart
