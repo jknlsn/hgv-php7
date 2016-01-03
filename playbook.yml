@@ -6,6 +6,7 @@
   roles:
     - common
     - php-fpm
+    - memcached
     - percona
     - nginx
     - wp-cli
