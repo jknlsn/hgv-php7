@@ -1,4 +1,0 @@
----
-
-- name: php-memcached restart
-  service: name=php-memcached state=restarted
