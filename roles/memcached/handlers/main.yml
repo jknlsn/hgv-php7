@@ -1,4 +1,4 @@
 ---
 
-- name: memcached restart
-  service: name=memcached state=restarted
+- name: php-memcached restart
+  service: name=php-memcached state=restarted
