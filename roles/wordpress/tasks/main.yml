@@ -33,6 +33,9 @@
 - name: "Localconfig for {{ enviro }} WordPress"
   template: src=wp/local-config.php dest={{ wp_doc_root }}/{{ inventory_hostname }}/local-config.php owner={{ web_user }} group={{ web_group }}
 
+- name: "Object Cache for {{ enviro }} WordPress"
+  template: src=wp/object-cache.php dest={{ wp_doc_root }}/{{ inventory_hostname }}/wp-content/object-cache.php owner={{ web_user }} group={{ web_group }}
+
 - name: "Run the WP install for {{ enviro }}"
   command: /usr/local/bin/wp core install --url={{ wp_url }} --title="{{ wp_site_name }}" --admin_user={{ wp_admin }} --admin_password={{ wp_admin_password }} --admin_email={{ wp_admin_email }}
   sudo: yes
