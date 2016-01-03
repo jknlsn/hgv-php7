@@ -2,7 +2,7 @@
 
 - name: Install memcached server
   run_once: true
-  apt: name=php7.0-memcached state=present
+  apt: name=php-memcached state=present
 
 - name: Do memcached config
   run_once: true
