@@ -13,3 +13,7 @@ sudo apt-get update && sudo apt-get upgrade
 
 echo "- apt-get install ansible git"
 sudo apt-get install ansible git -y
+
+nano host_vars/website
+
+time sudo ansible-playbook -i hosts playbook.yml -c local
