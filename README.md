@@ -4,6 +4,8 @@
 
 ## Introduction
 
+**This is provided as is, with no warranty expressed or implied or guarantees.**
+
 This Ansible Playbook is designed to setup a [Mercury-Like](https://github.com/wpengine/hgv/) environment on a Production server without the configuration hassle. This playbook was forked from [Zach Adams Mercury Playbook](https://github.com/zach-adams/hgv-deploy-full/), itself forked from [WPEngine's Mercury Vagrant](https://github.com/wpengine/hgv/). 
 
 Some changes have been made in order to run on the new PHP7 framework.
@@ -26,6 +28,15 @@ This Playbook will setup:
 #### This playbook will only run on Ubuntu 14.04 LTS
 
 ## Installation
+
+###Script with prompts
+
+1. SSH onto a newly created server
+2. Type `wget https://raw.githubusercontent.com/jknlsn/hgv-php7/master/run.sh`
+3. Type `chmod 755 run.sh`
+4. Type `./run.sh` and follow the prompts, fill in required information. See the manual explanation for the steps automated for you.
+
+###Manual
 
 1. SSH onto a newly created server
 1.5. Add necessary Apt package (if not already installed) with `sudo apt-get install software-properties-common python-software-properties`
